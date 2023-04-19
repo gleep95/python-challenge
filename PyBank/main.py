@@ -3,11 +3,9 @@ import csv
 
 
 #Open and read budget data file
-#budgetdata_csv = os.path.join( "Resources", "budget_data.csv")
-budgetdata_csv = os.path.join("C://Users/gpanc/OneDrive/Documents/python-challenge/PyBank/Resources/budget_data.csv")
+budgetdata_csv = os.path.join("Resources", "budget_data.csv")
 
 #Works cited: https://codecaliper.me/counting-the-number-of-rows-in-a-csv-file-with-python
-
 with open(budgetdata_csv,"r") as csv_reader:
     line = next(csv_reader)
     csv_reader = csv.reader(csv_reader)
@@ -56,7 +54,7 @@ print("Greatest Decrease in Profits: ", greatest_dec_date, "${:,.2f}".format(gre
 print()
 
 
-txt_file = open("results_file.txt", "w")
+txt_file = open("analysis/results_file.txt", "w")
 txt_file.write("Financial Analysis\n")
 txt_file.write("---------------------------------------\n")
 txt_file.write("Total Months: "+ str(row_count)+"\n")  
